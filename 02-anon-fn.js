@@ -8,7 +8,7 @@ days.forEach(function(blahBlahBlah) {
     console.log(blahBlahBlah);
 });
 
-console.log('convention:');
+console.log('\nconvention:');
 
 // convention would be to use 'day' instead
 days.forEach(function(day) {
