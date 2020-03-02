@@ -13,7 +13,7 @@ var sports = [
     {name: 'soccer', surface: 'field'}
 ];
 
-var filteredSports = [];
+// var filteredSports = [];
 
 /*
 // get only sports played on a field using traditional for-loop
@@ -25,3 +25,10 @@ for (i = 0; i < sports.length; i++) {
 
 console.log(filteredSports);
 */
+
+
+filteredSports = sports.filter(function(sport) {
+    return sport.surface === 'pool';
+});
+
+console.log(filteredSports);
