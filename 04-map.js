@@ -16,18 +16,21 @@ for var(i = 0; i < numbers.length; i++) {
 
 var numbers = [1, 2, 3, 4];
 
-var timesTen = numbers.map(function(number) {
-    return number * 10;
+var timesTen = numbers.map(function(element) {
+    return element * 10;
 })
 
 console.log(timesTen);
 
 /*
-map is similar to forEach, but notice the return stmt
+map is similar to forEach, but instead of altering the original data (as forEach does),
+map creates a new array 
+because of this, map requires a return stmt
 
-each number in the numbers array is being passed into the anon fn
-and whatever this function returns is placed into a NEW ARRAY and
-after each element has been processed, that NEW ARRAY IS RETURNED
+each element in the numbers array is being passed into the anonymous function
+and whatever that function returns is placed into a NEW ARRAY 
+
+so after each element has been processed, the new array has been created
 
 we didn't have to declare the new array separately
 */
