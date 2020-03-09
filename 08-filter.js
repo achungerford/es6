@@ -4,7 +4,7 @@ use 'filter' if you want to get a subset of an array
 Think of books on amazon.com and you want to select only books
 from a particular author.
 */
-
+console.log('example 1');
 var products = [
     {name: 'cucumber', type: 'vegetable', qty: 0, price: 1},
     {name: 'banana', type: 'fruit', qty: 10, price: 15},
@@ -21,3 +21,34 @@ result = products.filter(function(product) {
 });
 
 console.log(result);
+
+console.log('example 2');
+/* given a list of comments and a particular blog post,
+return just the comments associated with that post.
+*/
+
+var post = { id: 4, title: 'New Post'};
+var comments = [
+    {postId: 4, content: 'So cool!'},
+    {postId: 3, content: 'Love this.'},
+    {postId: 4, content: 'Strongly disagree'}
+];
+
+function commentsForPost(post, comments) {
+    return comments.filter(function(comment) {
+        return comment.postId === post.id;
+    });
+}
+
+console.log(commentsForPost(post, comments));
+
+console.log('example 3');
+
+// use filter to create a new array of numbers only greater than 50
+var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
+
+var filteredNumbers = numbers.filter(function(numbers){
+    return numbers > 50;
+});
+
+console.log(filteredNumbers);
