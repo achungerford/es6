@@ -13,7 +13,6 @@ var products = [
 ];
 
 // get subset: vegetables, qty > 0, price < 10
-
 result = products.filter(function(product) {
     return product.type === 'vegetable'
         && product.qty > 0
@@ -22,7 +21,45 @@ result = products.filter(function(product) {
 
 console.log(result);
 
+
+
+
+
 console.log('example 2');
+// filter the array of users, returning only users with admin priveleges
+var users = [
+    { id: 1, admin: true },  
+    { id: 2, admin: false },
+    { id: 3, admin: false },
+    { id: 4, admin: false },
+    { id: 5, admin: true },
+];
+
+var filteredUsers = users.filter(function(user) {
+    return user.admin === true;
+});
+console.log(filteredUsers);
+
+
+
+
+
+console.log('example 3');
+// use filter to create a new array of numbers only greater than 50
+
+var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
+
+var filteredNumbers = numbers.filter(function(numbers){
+    return numbers > 50;
+});
+
+console.log(filteredNumbers);
+
+
+
+
+
+console.log('example 4');
 /* given a list of comments and a particular blog post,
 return just the comments associated with that post.
 */
@@ -41,14 +78,3 @@ function commentsForPost(post, comments) {
 }
 
 console.log(commentsForPost(post, comments));
-
-console.log('example 3');
-
-// use filter to create a new array of numbers only greater than 50
-var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
-
-var filteredNumbers = numbers.filter(function(numbers){
-    return numbers > 50;
-});
-
-console.log(filteredNumbers);
