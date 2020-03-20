@@ -21,13 +21,28 @@ function handlePosts() {
 // anonymous callback without {}
 function handleCities() {
     var cities = [
-        { id: 23, title: 'NYC' },
-        { id: 52, title: 'LA' },
-        { id: 105, title: 'Miami' }
+        { id: 2, title: 'NYC' },
+        { id: 4, title: 'LA' },
+        { id: 6, title: 'Miami' }
     ];
     
     cities.forEach((city) => console.log(city));
 }
 
+// anonymous callback without {}, log the properties only
+function handleStates() {
+    var states = [
+        { id: 1, title: 'NY' },
+        { id: 5, title: 'CA' },
+        { id: 10, title: 'FL' }
+    ];
+    
+    states.forEach((states) => console.log(states.id));
+}
+
 handlePosts();
 handleCities();
+handleStates();
+
+// note: the only reason you need to pass 'post' and 'city'
+// into callback is bc we're printing it to the console.
