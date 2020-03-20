@@ -38,6 +38,7 @@ var users = [
 var filteredUsers = users.filter(function(user) {
     return user.admin === true;
 });
+
 console.log(filteredUsers);
 
 
@@ -46,7 +47,6 @@ console.log(filteredUsers);
 
 console.log('example 3');
 // use filter to create a new array of numbers only greater than 50
-
 var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
 
 var filteredNumbers = numbers.filter(function(numbers){
@@ -65,6 +65,7 @@ return just the comments associated with that post.
 */
 
 var post = { id: 4, title: 'New Post'};
+
 var comments = [
     {postId: 4, content: 'So cool!'},
     {postId: 3, content: 'Love this.'},
